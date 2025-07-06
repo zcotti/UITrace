@@ -9,4 +9,11 @@
     color: white;
 
     font-family: v.$font-text;
+
+    .mainContainer {
+        display: flex;
+        align-items: flex-start;
+
+        gap: 10px;
+    }
 }

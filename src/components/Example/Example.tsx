@@ -4,7 +4,7 @@ import ActionButtons from "../ActionButtons/ActionButtons";
 import Switcher from "../Switcher/Switcher";
 
 function Example() {
-  const [activeOption, setActiveOption] = useState("BigList");
+  const [activeOption, setActiveOption] = useState<string>("BigList");
   const options = ["BigList", "AnimatedBox", "ChartComponent"];
 
   const handleStart = () => {

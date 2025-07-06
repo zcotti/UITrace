@@ -1,2 +1,93 @@
 @use "../../variable.scss" as v;
 
+.containerCodePlayground {
+  margin: 2rem;
+}
+
+.textMain {
+  font-size: 25px;
+}
+
+.container {
+  margin-top: 13px;
+
+  width: 800px;
+  height: 260px;
+
+  border-radius: 10px;
+
+  background-color: #181926;
+
+  padding: 40px;
+
+  .codeInput {
+    height: 85%;
+    border-radius: 5px;
+  }
+}
+
+.btnContainer {
+  margin-top: 30px;
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  .btnRender {
+    background-color: v.$btn-bg-color;
+
+    &:hover {
+      transition: background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      background-color: v.$btn-bg-color-hover;
+    }
+
+    &:active {
+      scale: calc(0.95);
+    }
+  }
+
+  .btnRunTest {
+    background-color: #6c5dd3;
+
+    &:hover {
+      transition: background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      background-color: #342a74;
+    }
+
+    &:active {
+      scale: calc(0.95);
+    }
+  }
+
+  .btnReset {
+    background-color: #ff6b6b;
+
+    &:hover {
+      transition: background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+      background-color: #742222;
+    }
+
+    &:active {
+      scale: calc(0.95);
+    }
+  }
+
+  .btnRender,
+  .btnRunTest,
+  .btnReset {
+    width: auto;
+
+    font-size: 14px;
+
+    color: white;
+
+    cursor: pointer;
+    padding: 10px 32px;
+
+    border: none;
+    border-radius: 8px;
+
+    font-family: v.$font-text;
+    font-weight: 500;
+  }
+}
