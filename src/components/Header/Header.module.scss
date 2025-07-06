@@ -1,0 +1,64 @@
+@use "../../variable.scss" as v;
+
+.header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  width: 100%;
+  height: 70px;
+
+  font-weight: 500;
+
+  background-color: v.$header-bg-color;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+
+  padding: 14px 105px;
+  padding-right: 0px;
+
+  font-size: 30px;
+}
+
+.logoText {
+  color: v.$sec-text-color;
+}
+
+nav ul {
+  display: flex;
+
+  gap: 2rem;
+
+  list-style: none;
+
+  padding: 0;
+  margin: 0;
+}
+
+.langSwitcher {
+  padding-right: 125px;
+  display: inline;
+  gap: 10px;
+
+  button {
+    background-color: v.$header-bg-color;
+
+    font-family: v.$font-text;
+
+    border: none;
+    color: white;
+
+    cursor: pointer;
+
+    &:active {
+      color: v.$sec-text-color;
+    }
+
+    &:hover {
+      color: v.$sec-text-color;
+    }
+  }
+}
