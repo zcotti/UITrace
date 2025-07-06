@@ -1,0 +1,33 @@
+@use "../../variable.scss" as v;
+
+.exampleSwitcher {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  flex-direction: column;
+
+  gap: 15px;
+
+  .switcherBtn {
+    border: 1px solid #181926;
+    cursor: pointer;
+
+    text-align: left;
+
+    width: 100%;
+    padding: 8px 10px;
+
+    font-family: v.$font-text;
+    font-weight: 500;
+    font-size: 16px;
+
+    color: white;
+    background-color: #181926;
+
+    &.active {
+      background-color: v.$active-section-exm;
+      border-radius: 8px;
+      border: 1px solid v.$border-btn-color;
+    }
+  }
+}

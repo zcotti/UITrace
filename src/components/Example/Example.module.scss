@@ -21,29 +21,6 @@
   background-color: #181926;
 
   max-width: 215px;
-
-  ul {
-    display: flex;
-    flex-direction: column;
-
-    gap: 2rem;
-
-    list-style: none;
-
-    padding: 0;
-    margin: 0;
-
-    li .active {
-      padding: 10px 10px;
-
-      border-radius: 5px;
-      border: 1px solid v.$border-btn-color;
-    }
-
-    .active {
-      background-color: v.$active-section-exm;
-    }
-  }
 }
 
 .textMain {
@@ -52,49 +29,4 @@
 
 .line {
   border-bottom: 1px solid v.$btn-bg-color;
-}
-
-.btnContainer {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-
-  gap: 1rem;
-
-  .btnStart {
-    background-color: v.$btn-bg-color;
-
-    &:hover {
-      transition: background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      background-color: v.$btn-bg-color-hover;
-    }
-  }
-
-  .btnStop {
-    background-color: v.$second-bg-color;
-
-    &:hover {
-      transition: background-color 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
-      background-color: v.$second-bg-color-hover;
-    }
-  }
-
-  .btnStop,
-  .btnStart {
-    width: 200px;
-
-    font-size: 16px;
-
-    color: white;
-
-    cursor: pointer;
-    padding: 10px 20px;
-
-    border: none;
-    border-radius: 8px;
-
-    font-family: v.$font-text;
-    font-weight: 500;
-  }
 }

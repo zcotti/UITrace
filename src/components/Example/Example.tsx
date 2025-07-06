@@ -1,23 +1,31 @@
-import React from "react";
+import React, { useState } from "react";
 import styles from "./Example.module.scss";
+import ActionButtons from "../ActionButtons/ActionButtons";
+import Switcher from "../Switcher/Switcher";
 
 function Example() {
+  const [activeOption, setActiveOption] = useState("BigList");
+  const options = ["BigList", "AnimatedBox", "ChartComponent"];
+
+  const handleStart = () => {
+    console.log("ЗАПУСК");
+  };
+
+  const handleStop = () => {
+    console.log("СТОП");
+  };
+
   return (
     <div className={styles.mainContainerExample}>
       <span className={styles.textMain}>Examples</span>
       <div className={styles.containerExample}>
-        <div className="exampleSwitcher">
-          <ul>
-            <li className={styles.active}>BigList</li>
-            <li>AnimatedBox</li>
-            <li>ChartComponent</li>
-          </ul>
-        </div>
+        <Switcher
+          options={options}
+          activeOption={activeOption}
+          onChange={setActiveOption}
+        />
         <div className={styles.line}></div>
-        <div className={styles.btnContainer}>
-          <button className={styles.btnStart}>Start Example</button>
-          <button className={styles.btnStop}>Stop</button>
-        </div>
+        <ActionButtons onStart={handleStart} onStop={handleStop} />
       </div>
     </div>
   );
