@@ -1,0 +1,61 @@
+@use "../../variable.scss" as v;
+
+.logsSection {
+  margin: 2rem;
+
+  height: 100%;
+}
+
+.containerLogs {
+  margin-top: 13px;
+
+  border-radius: 10px;
+
+  min-width: 15rem;
+
+  
+  height: 280px;
+  min-height: 18.25rem;
+  max-height: 18.75rem;
+
+  background-color: #181926;
+
+  padding: 1.5rem;
+}
+
+.textMain {
+  font-size: 1.5625rem;
+}
+
+.logOutput {
+  border-radius: 5px;
+
+  height: 100%;
+
+  background-color: #241f1f;
+
+  padding: 2px 5px;
+
+  overflow-y: auto;
+  white-space: pre-wrap;
+
+  .logEntry {
+    font-size: 12px;
+    margin: 4px;
+
+    &.info {
+      color: #a0a0a0; // Серый для инфо
+    }
+    &.warning {
+      color: #ffaa00; // Жёлтый для предупреждений
+    }
+    &.error {
+      color: rgb(230, 55, 55); // Красный для ошибок
+    }
+
+    &:hover {
+      background-color: rgba(255, 255, 255, 0.1); // Лёгкое затемнение при наведении
+      border-radius: 0.25rem;
+    }
+  }
+}
