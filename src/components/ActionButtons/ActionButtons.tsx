@@ -1,20 +1,17 @@
 import React from "react";
 import styles from "./ActionButtons.module.scss";
+import Button from "../Button/Button";
 
-interface  ActionButtonsProps {
+interface ActionButtonsProps {
   onStart: () => void;
   onStop: () => void;
-};
+}
 
 function ActionButtons({ onStart, onStop }: ActionButtonsProps) {
   return (
     <div className={styles.btnContainer}>
-      <button className={styles.btnStart} onClick={onStart}>
-        Start Example
-      </button>
-      <button className={styles.btnStop} onClick={onStop}>
-        Stop
-      </button>
+      <Button text="Start Example" className={styles.btnStart} onClick={onStart}/>
+      <Button text="Stop" className={styles.btnStop} onClick={onStop}/>
     </div>
   );
 }

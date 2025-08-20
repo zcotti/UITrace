@@ -1,7 +1,7 @@
 import React, { useState } from "react";
 import styles from "./CodePlayground.module.scss";
 import Editor from "@monaco-editor/react";
-//import * as Babel from "@babel/standalone";
+import ButtonGroup from "../ButtonGroup/ButtonGroup";
 
 const DEFAULT_CODE = `function Hello() {
   return <div style={{ padding: 20 }}>Hello, world!</div>;
@@ -26,11 +26,7 @@ function CodePlayground() {
             }}
           />
         </div>
-        <div className={styles.btnContainer}>
-          <button className={styles.btnRender}>Render</button>
-          <button className={styles.btnRunTest}>Run Test</button>
-          <button className={styles.btnReset}>Reset</button>
-        </div>
+        <ButtonGroup/>
       </div>
     </div>
   );
